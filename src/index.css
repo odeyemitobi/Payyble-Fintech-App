@@ -24,3 +24,7 @@ p, h1{
 caption{
   color: #7AC231;
 }
+
+.ant-popover-inner{
+  border: none;
+}
