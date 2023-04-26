@@ -17,10 +17,10 @@ function TopsideBar() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#000614]">
       <nav className="pl-[16rem]">
         <div className="w-full py-4 px-6 flex justify-between border-b-2 border-solid border-[#7AC231]">
-          <div>
+          <div className="px-12">
             <p className="text-[18px] leading-[23px]">Hi Sylvanus,</p>
             <p className="text-[34px] leading-[37px] font-medium">
               Welcome Back

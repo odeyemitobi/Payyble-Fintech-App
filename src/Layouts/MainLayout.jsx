@@ -5,9 +5,14 @@ import PAY from "../Assets/img/payyble_.png";
 function MainLayout({ children }) {
   return (
     <section>
-      <div className="absolute pl-[5rem] pr-[34px] pt-7 pb-[33px] z-20 border-r-2 border-[#7AC231]">
-        <img className="h-[2rem]" src={PAY} alt="" />
-      </div>
+      <nav className="absolute  z-20 border-r-2 h-[100vh] bg-[#000614] border-[#7AC231]">
+        <div className="pl-[5rem] pr-[34px] pt-7 pb-[33px]">
+          <img className="h-[2rem]" src={PAY} alt="" />
+        </div>
+        <div className="px-4">
+          <h1>hello</h1>
+        </div>
+      </nav>
       <div>
         <div className="">
           <TopsideBar />
