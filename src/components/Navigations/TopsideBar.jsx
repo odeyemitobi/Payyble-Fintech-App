@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ETIM from "../../Assets/img/etim.png";
 import NOTIFI from "../../Assets/pic/Notifi.png";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Popover } from "antd";
 
-function TopsideBar() {
+function TopsideBar({ handleClick }) {
   const [open, setOpen] = useState(false);
+  const mobileMenuBtn = useRef(null);
+  const handleToggle = () => {
+    handleClick();
+  };
 
   const hide = () => {
     setOpen(false);
@@ -20,7 +25,7 @@ function TopsideBar() {
     <div className="w-full bg-[#000614]">
       <nav className="pl-[16rem]">
         <div className="w-full py-4 px-6 flex justify-between border-b-2 border-solid border-[#7AC231]">
-          <div className="px-12">
+          <div className="px-12 text-white">
             <p className="text-[18px] leading-[23px]">Hi Sylvanus,</p>
             <p className="text-[34px] leading-[37px] font-medium">
               Welcome Back
@@ -61,6 +66,11 @@ function TopsideBar() {
               <RiArrowDropDownLine color="#9B9B9B" size={25} />
             </div>
           </Popover>
+          <div className="md:hidden flex items-center">
+            <button ref={mobileMenuBtn} onClick={handleToggle}>
+              <GiHamburgerMenu color="red" />
+            </button>
+          </div>
         </div>
       </nav>
     </div>

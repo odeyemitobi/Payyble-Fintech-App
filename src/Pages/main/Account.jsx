@@ -1,12 +1,14 @@
 import React from "react";
 import MainLayout from "../../Layouts/MainLayout";
 
-function Dashboard() {
+function Account() {
   return (
     <MainLayout>
-      <div className=" text-red-600">hello</div>
+      <div>
+        <p>my account</p>
+      </div>
     </MainLayout>
   );
 }
 
-export default Dashboard;
+export default Account;

@@ -1,6 +1,7 @@
 import React from "react";
 import TopsideBar from "../components/Navigations/TopsideBar";
 import PAY from "../Assets/img/payyble_.png";
+import SidebarBtn from "../components/SidebarBtn/SidebarBtn";
 
 function MainLayout({ children }) {
   return (
@@ -10,14 +11,14 @@ function MainLayout({ children }) {
           <img className="h-[2rem]" src={PAY} alt="" />
         </div>
         <div className="px-4">
-          <h1>hello</h1>
+          <SidebarBtn />
         </div>
       </nav>
       <div>
-        <div className="">
+        <div className=" flex-1">
           <TopsideBar />
         </div>
-        <div>{children}</div>
+        <div className="pl-[19rem]">{children}</div>
       </div>
     </section>
   );

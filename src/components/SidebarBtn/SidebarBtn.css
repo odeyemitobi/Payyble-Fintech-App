@@ -1,0 +1,21 @@
+.selected {
+  background:  rgba(66, 126, 90, 0.21);
+  border: 1px solid #7AC231;
+}
+
+.selected svg{
+    color: #7AC231;
+}
+
+.nav-link-button {
+  font-weight: 600;
+}
+
+.nav-link-button p{
+    color: #7AC231;
+}
+
+.nav-link-button svg {
+  fill: #7AC231;
+}
+
