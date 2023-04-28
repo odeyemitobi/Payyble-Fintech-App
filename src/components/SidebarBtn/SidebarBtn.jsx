@@ -191,7 +191,7 @@ function SidebarBtn(side) {
             {isOpen && (
               <div className="">
                 <div className="w-full">
-                  <h1 className="primary px-[53px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
+                  <h1 className="primary px-[50px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
                     <svg
                       width="8"
                       height="9"
@@ -203,7 +203,7 @@ function SidebarBtn(side) {
                     </svg>
                     <p className="ml-[6px]">Setting</p>
                   </h1>
-                  <h1 className="primary px-[53px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
+                  <h1 className="primary px-[50px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
                     <svg
                       width="8"
                       height="9"
@@ -215,7 +215,7 @@ function SidebarBtn(side) {
                     </svg>
                     <p className="ml-[6px]">API Doc</p>
                   </h1>
-                  <h1 className="primary px-[53px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
+                  <h1 className="primary px-[50px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
                     <svg
                       width="8"
                       height="9"
@@ -234,7 +234,7 @@ function SidebarBtn(side) {
           <NavLink
             to="/support"
             className={({ isActive }) =>
-              "flex text-xl mt-8  items-center text-[#9B9B9B] py-3 pl-4 pr-4 rounded-[20px] transition duration-200 nav-link-button" +
+              "flex text-xl mt-2 items-center text-[#9B9B9B] py-3 pl-4 pr-4 rounded-[20px] transition duration-200 nav-link-button" +
               (isActive ? " selected" : "cursor-pointer")
             }
           >

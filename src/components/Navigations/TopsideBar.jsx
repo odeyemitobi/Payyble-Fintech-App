@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import ETIM from "../../Assets/img/etim.png";
-import NOTIFI from "../../Assets/pic/Notifi.png";
+import ETIM from "../../Assets/img/Etim.svg";
+import NOTIFI from "../../Assets/pic/notifi.svg";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";

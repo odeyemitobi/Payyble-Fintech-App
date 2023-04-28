@@ -1,6 +1,6 @@
 import React from "react";
 import TopsideBar from "../components/Navigations/TopsideBar";
-import PAY from "../Assets/img/payyble_.png";
+import PAY from "../Assets/img/payyble_.svg";
 import SidebarBtn from "../components/SidebarBtn/SidebarBtn";
 
 function MainLayout({ children }) {
