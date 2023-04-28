@@ -4,8 +4,7 @@
 
 body {
   margin: 0;
-  background: grey;
-  overflow-x: hidden;
+  background: #000614;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
