@@ -4,7 +4,7 @@ import MainLayout from "../../Layouts/MainLayout";
 function Account() {
   return (
     <MainLayout>
-      <div>
+      <div className=" bg-lime-700">
         <p>my account</p>
       </div>
     </MainLayout>

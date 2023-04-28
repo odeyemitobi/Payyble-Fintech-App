@@ -9,7 +9,6 @@ import Funds from "./Pages/main/Funds";
 import Deposit from "./Pages/main/Deposit";
 import Withdraw from "./Pages/main/Withdraw";
 import Invoice from "./Pages/main/Invoice";
-import Developer from "./Pages/main/Developer";
 import Support from "./Pages/main/Support";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
           <Route exact path="/deposit" element={<Deposit />} />
           <Route exact path="/withdraw" element={<Withdraw />} />
           <Route exact path="/invoice" element={<Invoice />} />
-          <Route exact path="/developer" element={<Developer />} />
           <Route exact path="/support" element={<Support />} />
         </Routes>
       </Router>

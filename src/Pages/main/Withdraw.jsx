@@ -4,7 +4,7 @@ import MainLayout from "../../Layouts/MainLayout";
 function Withdraw() {
   return (
     <MainLayout>
-      <div>Withdraw</div>
+      <div className=" bg-lime-700">Withdraw</div>
     </MainLayout>
   );
 }

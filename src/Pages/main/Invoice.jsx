@@ -4,7 +4,7 @@ import MainLayout from "../../Layouts/MainLayout";
 function Invoice() {
   return (
     <MainLayout>
-      <div>Invoice</div>
+      <div className=" bg-lime-700">Invoice</div>
     </MainLayout>
   );
 }

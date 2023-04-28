@@ -4,7 +4,7 @@ import MainLayout from "../../Layouts/MainLayout";
 function Deposit() {
   return (
     <MainLayout>
-      <div>Deposit</div>
+      <div className=" bg-lime-700">Deposit</div>
     </MainLayout>
   );
 }

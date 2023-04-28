@@ -4,7 +4,7 @@ import MainLayout from "../../Layouts/MainLayout";
 function Support() {
   return (
     <MainLayout>
-      <div>Setting</div>
+      <div className=" bg-lime-700">Setting</div>
     </MainLayout>
   );
 }

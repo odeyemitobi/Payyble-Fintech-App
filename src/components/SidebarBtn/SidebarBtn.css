@@ -1,32 +1,32 @@
 .selected {
-  background:  rgba(66, 126, 90, 0.21);
-  border: 1px solid #7AC231;
+  background: rgba(66, 126, 90, 0.21);
+  border: 1px solid #7ac231;
 }
 
-.selected svg{
-    color: #7AC231!important;
+.selected svg {
+  color: #7ac231 !important;
 }
 
-.selected img{
-  color: #7AC231!important;
+.selected img {
+  fill: #7ac231 !important;
 }
 
 .nav-link-button {
   font-weight: 600;
 }
 
-.nav-link-button p{
-    color: #7AC231;
+.nav-link-button p {
+  color: #7ac231;
 }
 
 .nav-link-button svg {
-  fill: #7AC231;
+  fill: #7ac231;
 }
 
-.nav-link-button img{
-  color: #7AC231!important;
+.nav-link-button img {
+  color: #7ac231 !important;
 }
 
-.primary{
-    color: #9B9B9B;
+.primary {
+  color: #9b9b9b;
 }

@@ -4,7 +4,7 @@ import MainLayout from "../../Layouts/MainLayout";
 function Wallet() {
   return (
     <MainLayout>
-      <div>Wallet</div>
+      <div className=" bg-lime-700">Wallet</div>
     </MainLayout>
   );
 }
