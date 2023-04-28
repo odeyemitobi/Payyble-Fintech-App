@@ -3,12 +3,14 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Dashboard from "./Pages/main/Dashboard";
 import Account from "./Pages/main/Account";
-import Wallet from './Pages/main/Wallet';
-import Transactions from './Pages/main/Transactions';
-import Funds from './Pages/main/Funds';
-import Deposit from './Pages/main/Deposit';
-import Withdraw from './Pages/main/Withdraw';
-import Invoice from './Pages/main/Invoice';
+import Wallet from "./Pages/main/Wallet";
+import Transactions from "./Pages/main/Transactions";
+import Funds from "./Pages/main/Funds";
+import Deposit from "./Pages/main/Deposit";
+import Withdraw from "./Pages/main/Withdraw";
+import Invoice from "./Pages/main/Invoice";
+import Developer from "./Pages/main/Developer";
+import Support from "./Pages/main/Support";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route exact path="/deposit" element={<Deposit />} />
           <Route exact path="/withdraw" element={<Withdraw />} />
           <Route exact path="/invoice" element={<Invoice />} />
+          <Route exact path="/developer" element={<Developer />} />
+          <Route exact path="/support" element={<Support />} />
         </Routes>
       </Router>
     </div>

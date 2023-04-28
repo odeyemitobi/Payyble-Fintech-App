@@ -2,14 +2,23 @@ import React from "react";
 import "../SidebarBtn/SidebarBtn.css";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
-import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { GrTransaction } from "react-icons/gr";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowRight,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
+import { useState } from "react";
+import Deposit from "../../Assets/pic/Deposit.svg";
+import Wallet from "../../Assets/pic/Wallet.svg";
+import Withdraw from "../../Assets/pic/Withdraw.svg";
+import Invoice from "../../Assets/pic/Invoice.svg";
 
 function SidebarBtn(side) {
   // const handleStyle = () => {
   // document.body.style.overflow = "auto";
   // };
 
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       {!side.isNew ? (
@@ -32,6 +41,7 @@ function SidebarBtn(side) {
             </svg>
             <p className="ml-3">Dashboard</p>
           </NavLink>
+
           <NavLink
             to="/account"
             className={({ isActive }) =>
@@ -45,6 +55,7 @@ function SidebarBtn(side) {
               <MdOutlineKeyboardArrowRight />
             </div>
           </NavLink>
+
           <NavLink
             to="/wallet"
             className={({ isActive }) =>
@@ -52,9 +63,10 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <CgProfile color="" size={25} />
+            <img src={Wallet} alt="Wallet" />
             <p className="ml-3">Wallet</p>
           </NavLink>
+
           <NavLink
             to="/transaction"
             className={({ isActive }) =>
@@ -74,6 +86,7 @@ function SidebarBtn(side) {
 
             <p className="ml-3">Transactions</p>
           </NavLink>
+
           <NavLink
             to="/fund"
             className={({ isActive }) =>
@@ -93,6 +106,7 @@ function SidebarBtn(side) {
 
             <p className="ml-3">Fund Transfer</p>
           </NavLink>
+
           <NavLink
             to="/deposit"
             className={({ isActive }) =>
@@ -100,12 +114,13 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <CgProfile color="" size={25} />
+            <img src={Deposit} alt="Deposit" />
             <p className="ml-3">Deposit</p>
             <div className="mt-1 ml-[61px]">
               <MdOutlineKeyboardArrowRight />
             </div>
           </NavLink>
+
           <NavLink
             to="/withdraw"
             className={({ isActive }) =>
@@ -113,12 +128,13 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <CgProfile color="" size={25} />
+            <img src={Withdraw} alt="Withdraw" />
             <p className="ml-3">Withdraw</p>
             <div className="mt-1 ml-11">
               <MdOutlineKeyboardArrowRight />
             </div>
           </NavLink>
+
           <NavLink
             to="/invoice"
             className={({ isActive }) =>
@@ -126,7 +142,7 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <CgProfile color="" size={25} />
+            <img src={Invoice} alt="Invoice" />
             <p className="ml-3 ">Invoice</p>
             <div className="mt-1 ml-[67px]">
               <MdOutlineKeyboardArrowRight />
@@ -135,40 +151,111 @@ function SidebarBtn(side) {
           <div className="primary px-4 pt-9 text-[13px] leading-[17px]">
             <h1>MERCHANTS</h1>
           </div>
+          <div className="relative">
+            <div
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="flex cursor-pointer text-xl mt-2 items-center text-[#9B9B9B] py-3 pl-4 pr-4 rounded-[20px] transition duration-200"
+            >
+              <svg
+                width="24"
+                height="14"
+                viewBox="0 0 24 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6001 13L22.6001 7L16.6001 1"
+                  stroke="#9B9B9B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 1L1 7L7 13"
+                  stroke="#9B9B9B"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <p className="ml-3 ">Developer</p>
+              <div className="ml-[35px]">
+                {!isOpen ? (
+                  <MdOutlineKeyboardArrowDown />
+                ) : (
+                  <MdOutlineKeyboardArrowUp />
+                )}
+              </div>
+            </div>
+            {isOpen && (
+              <div className="">
+                <div className="w-full">
+                  <h1 className="primary px-[53px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
+                    <svg
+                      width="8"
+                      height="9"
+                      viewBox="0 0 8 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="4" cy="4.5" r="4" fill="#7AC231" />
+                    </svg>
+                    <p className="ml-[6px]">Setting</p>
+                  </h1>
+                  <h1 className="primary px-[53px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
+                    <svg
+                      width="8"
+                      height="9"
+                      viewBox="0 0 8 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="4" cy="4.5" r="4" fill="#9B9B9B" />
+                    </svg>
+                    <p className="ml-[6px]">API Doc</p>
+                  </h1>
+                  <h1 className="primary px-[53px] pt-2 pb-2 flex items-center hover:bg-transparent cursor-pointer rounded-r-lg border-l-transparent hover:border-lime-500 border-l-4">
+                    <svg
+                      width="8"
+                      height="9"
+                      viewBox="0 0 8 9"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="4" cy="4.5" r="4" fill="#9B9B9B" />
+                    </svg>
+                    <p className="ml-[6px]">API Setting</p>
+                  </h1>
+                </div>
+              </div>
+            )}
+          </div>
           <NavLink
-            to="/invoice"
+            to="/support"
             className={({ isActive }) =>
-              "flex text-xl items-center text-[#9B9B9B] py-3 pl-4 pr-4 rounded-[20px] transition duration-200 nav-link-button" +
+              "flex text-xl mt-8  items-center text-[#9B9B9B] py-3 pl-4 pr-4 rounded-[20px] transition duration-200 nav-link-button" +
               (isActive ? " selected" : "cursor-pointer")
             }
           >
             <svg
               width="24"
-              height="14"
-              viewBox="0 0 24 14"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M16.6001 13L22.6001 7L16.6001 1"
-                stroke="#9B9B9B"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                d="M18.75 13.5L17.6895 14.5605L19.6252 16.5H13.5C12.7044 16.5 11.9413 16.8161 11.3787 17.3787C10.8161 17.9413 10.5 18.7044 10.5 19.5C10.5 20.2956 10.8161 21.0587 11.3787 21.6213C11.9413 22.1839 12.7044 22.5 13.5 22.5H15V21H13.5C13.1022 21 12.7206 20.842 12.4393 20.5607C12.158 20.2794 12 19.8978 12 19.5C12 19.1022 12.158 18.7206 12.4393 18.4393C12.7206 18.158 13.1022 18 13.5 18H19.6252L17.688 19.9402L18.75 21L22.5 17.25L18.75 13.5Z"
+                fill="#9B9B9B"
               />
               <path
-                d="M7 1L1 7L7 13"
-                stroke="#9B9B9B"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                d="M7.5 16.5H3L2.99775 5.1795L11.5732 11.1165C11.6986 11.2033 11.8475 11.2497 12 11.2497C12.1525 11.2497 12.3014 11.2033 12.4268 11.1165L21 5.1825V12H22.5V4.5C22.4996 4.1023 22.3414 3.721 22.0602 3.43978C21.779 3.15856 21.3977 3.0004 21 3H3C2.60256 3 2.22137 3.15773 1.94013 3.43854C1.65889 3.71936 1.5006 4.10032 1.5 4.49775V16.5C1.5006 16.8976 1.65882 17.2788 1.94 17.56C2.22117 17.8412 2.60236 17.9994 3 18H7.5V16.5ZM19.3493 4.5L12 9.588L4.65075 4.5H19.3493Z"
+                fill="#9B9B9B"
               />
             </svg>
 
-            <p className="ml-3 ">Developer</p>
-            <div className="mt-1 ml-[37px]">
-              <MdOutlineKeyboardArrowDown />
-            </div>
+            <p className="ml-3 ">Support</p>
           </NavLink>
         </div>
       ) : (
