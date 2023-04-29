@@ -8,11 +8,11 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { useState } from "react";
-import Deposit from "../../Assets/pic/Deposit.svg";
-import Wallet from "../../Assets/pic/Wallet.svg";
-import Withdraw from "../../Assets/pic/Withdraw.svg";
-import Invoice from "../../Assets/pic/Invoice.svg";
 import Percent from "../../Assets/img/Percent.svg";
+import { GiWallet } from "react-icons/gi";
+import { BiMoneyWithdraw } from "react-icons/bi";
+import { FaPiggyBank } from "react-icons/fa";
+import { FaFileInvoiceDollar } from "react-icons/fa";
 
 function SidebarBtn(side) {
   // const handleStyle = () => {
@@ -64,7 +64,7 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <img src={Wallet} alt="Wallet" />
+            <GiWallet size={25} />
             <p className="ml-3">Wallet</p>
           </NavLink>
 
@@ -115,7 +115,7 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <img src={Deposit} alt="Deposit" />
+            <FaPiggyBank size={25} />
             <p className="ml-3">Deposit</p>
             <div className="mt-1 ml-[61px]">
               <MdOutlineKeyboardArrowRight />
@@ -129,7 +129,7 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <img src={Withdraw} alt="Withdraw" />
+            <BiMoneyWithdraw size={25} />
             <p className="ml-3">Withdraw</p>
             <div className="mt-1 ml-11">
               <MdOutlineKeyboardArrowRight />
@@ -143,7 +143,7 @@ function SidebarBtn(side) {
               (isActive ? " selected" : "cursor-pointer")
             }
           >
-            <img src={Invoice} alt="Invoice" />
+            <FaFileInvoiceDollar size={25} />
             <p className="ml-3 ">Invoice</p>
             <div className="mt-1 ml-[67px]">
               <MdOutlineKeyboardArrowRight />

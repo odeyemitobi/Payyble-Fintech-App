@@ -26,7 +26,7 @@ function TopsideBar({ handleClick }) {
       <nav className="pl-[16rem]">
         <div className="w-full py-4 px-6 flex justify-between border-b-2 border-solid border-[#7AC231]">
           <div className="px-11 text-white">
-            <p className="text-[18px] leading-[23px]">Hi Sylvanus,</p>
+            <p className="text-[18px] leading-[23px]">Hi Tobiloba,</p>
             <p className="text-[34px] leading-[37px] font-medium">
               Welcome Back
             </p>
