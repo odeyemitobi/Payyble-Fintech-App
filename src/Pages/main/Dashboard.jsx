@@ -3,6 +3,7 @@ import MainLayout from "../../Layouts/MainLayout";
 import Tot from "../../Assets/img/Total.svg";
 import Totpay from "../../Assets/img/Totalpay.svg";
 import Amt from "../../Assets/img/Amount.svg";
+import Month from "../../Assets/img/Month.svg";
 import { BiDownArrowAlt, BiUpArrowAlt } from "react-icons/bi";
 
 function Dashboard() {
@@ -14,7 +15,19 @@ function Dashboard() {
             <img className="h-[6.5rem]" src={Tot} alt="Tot" />
             <img className="h-[6.5rem]" src={Totpay} alt="Totpay" />
           </div>
-          <div className="text-white">hello</div>
+          <div className="w-full pt-5">
+            <div className="text-white pl-6 pr-4 py-3 border border-[#7ac231] rounded-[10px] ">
+              <div className="flex items-center justify-between">
+                <div className="">
+                  <p className=" text-lg">Monthly View</p>
+                  <p className=" text-xs">Platform</p>
+                </div>
+                <div className="">
+                  <img src={Month} alt="Month" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="w-full pt-5 pl-7">
           <div>
